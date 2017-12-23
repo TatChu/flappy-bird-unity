@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BackgroundController\scaler.cs" />
      <Compile Include="Assets\Scripts\BirdController\BirdController.cs" />
+     <Compile Include="Assets\Scripts\Controller\GamePlayController.cs" />
      <Compile Include="Assets\Scripts\PipeController\PipeHolder.cs" />
      <Compile Include="Assets\Scripts\SpawnerController\SpawnerPipeController.cs" />
  <Reference Include="Facebook.Unity.Settings">

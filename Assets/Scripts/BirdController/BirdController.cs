@@ -8,8 +8,14 @@ public class BirdController : MonoBehaviour {
 	private Rigidbody2D birdBody;
 	private Animator anim;
 
+	// spawner to destroy when bird died
+	private GameObject spawner;
+
+	// sync variable this class
+	public static BirdController instance = null;
+
 	// Variable to handle button flap
-	private bool isAlive;
+	public bool isAlive;
 	private bool pressedFlapBtn;
 
 
@@ -24,6 +30,8 @@ public class BirdController : MonoBehaviour {
 		isAlive = true;
 		birdBody = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
+		spawner = GameObject.Find ("Spawner Pipe");
+		_MakeInstance ();
 	}
 
 	// Use this for initialization
@@ -81,7 +89,15 @@ public class BirdController : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D target){
 		if(target.gameObject.tag == "pipe" || target.gameObject.tag == "bottom-wall" || target.gameObject.tag == "top-wall"){
 			audioSource.PlayOneShot (dieClip);
+			Destroy (spawner);
 			anim.SetTrigger ("isDied");
+			this.isAlive = false;
+		}
+	}
+
+	void _MakeInstance(){
+		if (instance == null) {
+			instance = this;
 		}
 	}
 }

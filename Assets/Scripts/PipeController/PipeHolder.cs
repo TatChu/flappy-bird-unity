@@ -14,6 +14,11 @@ public class PipeHolder : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (BirdController.instance != null) {
+			if (!BirdController.instance.isAlive) {
+				Destroy (GetComponent<PipeHolder> ());
+			}
+		}
 		_PipeMove ();
 	}
 
