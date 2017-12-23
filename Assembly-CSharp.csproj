@@ -53,7 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\BackgroundController\scaler.cs" />
      <Compile Include="Assets\Scripts\BirdController\BirdController.cs" />
-     <Compile Include="Assets\Scripts\PipiController\PipeHolder.cs" />
+     <Compile Include="Assets\Scripts\PipeController\PipeHolder.cs" />
      <Compile Include="Assets\Scripts\SpawnerController\SpawnerPipeController.cs" />
  <Reference Include="Facebook.Unity.Settings">
  <HintPath>/Users/theboss/Projects/unity-project/flappy-bird-unity/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
