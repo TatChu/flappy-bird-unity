@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{0540E7D1-3AFA-865F-9A19-DED2D4D32BC2}</ProjectGuid>
+    <ProjectGuid>{BAC6747C-AC81-EEF7-F188-9FB96AADCBB6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -54,8 +54,9 @@
      <Compile Include="Assets\Scripts\BackgroundController\scaler.cs" />
      <Compile Include="Assets\Scripts\BirdController\BirdController.cs" />
      <Compile Include="Assets\Scripts\PipiController\PipeHolder.cs" />
+     <Compile Include="Assets\Scripts\SpawnerController\SpawnerPipeController.cs" />
  <Reference Include="Facebook.Unity.Settings">
- <HintPath>/Users/theboss/Projects/unity-project/test1/learn_2d_1/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
+ <HintPath>/Users/theboss/Projects/unity-project/flappy-bird-unity/Library/FacebookSDK/Facebook.Unity.Settings.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
