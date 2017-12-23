@@ -72,4 +72,16 @@ public class BirdController : MonoBehaviour {
 		pressedFlapBtn = true;
 	}
 
+	void OnTriggerEnter2D(Collider2D target){
+		if (target.tag == "pipe-holder") {
+			audioSource.PlayOneShot (pingClip);
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D target){
+		if(target.gameObject.tag == "pipe" || target.gameObject.tag == "bottom-wall" || target.gameObject.tag == "top-wall"){
+			audioSource.PlayOneShot (dieClip);
+			anim.SetTrigger ("isDied");
+		}
+	}
 }
